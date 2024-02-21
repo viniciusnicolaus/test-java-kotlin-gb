@@ -1,7 +1,7 @@
 package br.com.boticario.testkotlin.application.request
 
 data class CreateProductRequest(
-  val sku: Long,
-  val name: String,
-  val inventory: InventoryRequest = InventoryRequest()
+    val sku: Long,
+    val name: String,
+    val inventory: InventoryRequest = InventoryRequest()
 )
