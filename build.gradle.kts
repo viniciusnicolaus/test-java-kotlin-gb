@@ -25,8 +25,6 @@ dependencies {
   testImplementation("io.mockk:mockk:1.13.4")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("junit:junit:4.13.1")
-  testImplementation("junit:junit:4.13.1")
-  testImplementation("junit:junit:4.13.1")
 }
 
 tasks.withType<KotlinCompile> {
