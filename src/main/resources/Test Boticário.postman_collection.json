@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "c45511d6-088f-4ea3-a168-08faaa501acc",
+		"name": "Test Boticário",
+		"description": "Collection CRUD challenge GB Tech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7997573"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sku\": 6123,\n    \"name\": \"Malbec Desodorante Colônia 100ml\",\n    \"inventory\": {\n        \"warehouses\": [\n            {\n                \"locality\": \"RJ\",\n                \"quantity\": 5,\n                \"type\": \"ECOMMERCE\"\n            },\n            {\n                \"locality\": \"SP\",\n                \"quantity\": 10,\n                \"type\": \"PHYSICAL_STORE\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Malbec Gold Desodorante Colônia 100ml\",\n    \"inventory\": {\n        \"warehouses\": [\n            {\n                \"locality\": \"RJ\",\n                \"quantity\": 101,\n                \"type\": \"ECOMMERCE\"\n            },\n            {\n                \"locality\": \"SP\",\n                \"quantity\": 1000,\n                \"type\": \"PHYSICAL_STORE\"\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/6123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"6123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/6123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"6123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/6123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"6123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

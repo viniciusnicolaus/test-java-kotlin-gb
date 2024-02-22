@@ -1,3 +1,35 @@
+# Projeto
+
+Boticário Test - GB - TECH
+
+## Informações e Pré requisitos
+
+Aqui estão algumas informações sobre como executar o projeto em sua máquina e sobre a composição do projeto.
+
+O projeto é desenvolvido na linguagem Kotlin e utiliza o gradle.
+
+* JDK 17 (LTS)
+
+### How to 🔨
+
+Um guia passo a passo que lhe dirá como colocar o ambiente de desenvolvimento em funcionamento.
+
+```
+$ ./gradlew clean build
+```
+
+```
+$ ./gradlew :bootRun
+```
+
+## Informações sobre servidor
+
+Servidor ficará disponível na rota http://localhost:8080/
+
+## Documentação adicional
+
+Nos recursos, você encontra um json com uma coleção postman para simplificar seus testes utilizando todas as solicitações.
+
 ### Backend Test
 
 [![Build Status](https://travis-ci.com/belezanaweb/test-java.svg?branch=master)](https://travis-ci.com/belezanaweb/test-java)
@@ -43,31 +75,31 @@ Com a seguinte representação de produto:
 
 Crie endpoints para as seguintes ações:
 
-- [ ] Criação de produto onde o payload será o json informado acima (exceto as propriedades **isMarketable** e **inventory.quantity**)
+- [X] Criação de produto onde o payload será o json informado acima (exceto as propriedades **isMarketable** e **inventory.quantity**)
 
-- [ ] Edição de produto por **sku**
+- [X] Edição de produto por **sku**
 
-- [ ] Recuperação de produto por **sku**
+- [X] Recuperação de produto por **sku**
 
-- [ ] Deleção de produto por **sku**
+- [X] Deleção de produto por **sku**
 
 ### Requisitos
 
 
-- [ ] Toda vez que um produto for recuperado por **sku** deverá ser calculado a propriedade: **inventory.quantity**
+- [X] Toda vez que um produto for recuperado por **sku** deverá ser calculado a propriedade: **inventory.quantity**
 
         A propriedade inventory.quantity é a soma da quantity dos warehouses
 
-- [ ] Toda vez que um produto for recuperado por **sku** deverá ser calculado a propriedade: **isMarketable**
+- [X] Toda vez que um produto for recuperado por **sku** deverá ser calculado a propriedade: **isMarketable**
 
         Um produto é marketable sempre que seu inventory.quantity for maior que 0
 
-- [ ] Caso um produto já existente em memória tente ser criado com o mesmo **sku** uma exceção deverá ser lançada
+- [X] Caso um produto já existente em memória tente ser criado com o mesmo **sku** uma exceção deverá ser lançada
 
         Dois produtos são considerados iguais se os seus skus forem iguais
 
 
-- [ ] Ao atualizar um produto, o antigo deve ser sobrescrito com o que esta sendo enviado na requisição
+- [X] Ao atualizar um produto, o antigo deve ser sobrescrito com o que esta sendo enviado na requisição
 
         A requisição deve receber o sku e atualizar com o produto que tbm esta vindo na requisição
 
